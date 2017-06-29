@@ -1,13 +1,13 @@
 ( function( $ ) {
     "use strict";
 
-    var THE_TATTOOIST = window.THE_TATTOOIST || {};
+    var Tattoo_Studio = window.Tattoo_Studio || {};
 
     /*-------------------------------------------------------------------*/
     /*      Remove the page loader to the DOM
     /*-------------------------------------------------------------------*/
 
-    THE_TATTOOIST.pageLoader = function(){
+    Tattoo_Studio.pageLoader = function(){
 
         setTimeout(function() {
 
@@ -26,7 +26,7 @@
     /*      Magnific Popup Scritps
     /*-------------------------------------------------------------------*/
 
-    THE_TATTOOIST.magnificPopup = function(){
+    Tattoo_Studio.magnificPopup = function(){
 
         // open image
         $('.zoom').magnificPopup({
@@ -44,7 +44,7 @@
     /*      Replace each select with a custom dropdown menu
     /*-------------------------------------------------------------------*/
 
-    THE_TATTOOIST.selectReplacer = function(){
+    Tattoo_Studio.selectReplacer = function(){
 
         $('select').each(function() {
             var $select = $(this),
@@ -93,7 +93,7 @@
     /*      Toggle
     /*-------------------------------------------------------------------*/
 
-    THE_TATTOOIST.toggle = function(){
+    Tattoo_Studio.toggle = function(){
 
         $('.open .content-toggle').show();
         $('.title-toggle').on('click',function(e){
@@ -126,7 +126,7 @@
     /*      Tabs
     /*-------------------------------------------------------------------*/
 
-    THE_TATTOOIST.tabs = function(){
+    Tattoo_Studio.tabs = function(){
 
         $('.title-tab:first-child').addClass('selected-tab');
         $('.title-tab').on('click',function(e){
@@ -151,7 +151,7 @@
     /*      Portfolio Layout
     /*-------------------------------------------------------------------*/
 
-    THE_TATTOOIST.portfolio = {
+    Tattoo_Studio.portfolio = {
 
         init : function(){
 
@@ -212,7 +212,7 @@
     /*      Scroll to Section (One Page Version)
     /*-------------------------------------------------------------------*/
 
-    THE_TATTOOIST.scrollToSection = function(){
+    Tattoo_Studio.scrollToSection = function(){
 
         $('.one-page #nav-menu a[href^="#"]').on('click',function (e) {
             e.preventDefault();
@@ -237,7 +237,7 @@
     /*      Highlight Navigation Link When Scrolling (One Page Version)
     /*-------------------------------------------------------------------*/
 
-    THE_TATTOOIST.scrollHighlight = function(){
+    Tattoo_Studio.scrollHighlight = function(){
 
         var scrollPosition = $(window).scrollTop();
 
@@ -267,7 +267,7 @@
     /*      Mobile Menu
     /*-------------------------------------------------------------------*/
 
-    THE_TATTOOIST.mobileMenu = {
+    Tattoo_Studio.mobileMenu = {
 
         init : function(){
 
@@ -345,7 +345,7 @@
     /*      Sticky Menu
     /*-------------------------------------------------------------------*/
 
-    THE_TATTOOIST.stickyMenu = function(){
+    Tattoo_Studio.stickyMenu = function(){
 
         if ($(window).scrollTop() > 50) {
             $('body').addClass('sticky');
@@ -360,7 +360,7 @@
     /*      Show/Hide Bottom Contacts Bar
     /*-------------------------------------------------------------------*/
 
-    THE_TATTOOIST.contactsBar = function(){
+    Tattoo_Studio.contactsBar = function(){
 
         if ($(window).scrollTop() + $(window).height() > $('footer').offset().top) {
             $('#contacts-bar').fadeOut('fast');
@@ -374,7 +374,7 @@
     /*      Custom Backgrounds
     /*-------------------------------------------------------------------*/
 
-    THE_TATTOOIST.backgrounds = function(){
+    Tattoo_Studio.backgrounds = function(){
 
         $.each( config.backgrouns, function( key, value ) {
 
@@ -421,7 +421,7 @@
     /*      Parallax
     /*-------------------------------------------------------------------*/
 
-    THE_TATTOOIST.parallax = function(){
+    Tattoo_Studio.parallax = function(){
 
         $('.plx').each(function() {
             $(this).parallax('50%', 0.5);
@@ -433,7 +433,7 @@
     /*      Flexslider
     /*-------------------------------------------------------------------*/
 
-    THE_TATTOOIST.flexslider = function(){
+    Tattoo_Studio.flexslider = function(){
 
         $('.flexslider').each(function(){
             var $that = $(this),
@@ -455,7 +455,7 @@
     /*      YouTube Video Background
     /*-------------------------------------------------------------------*/
 
-    THE_TATTOOIST.youtubeBg = function(){
+    Tattoo_Studio.youtubeBg = function(){
 
         var $playerObject = $('.youtube-player');
 
@@ -485,7 +485,7 @@
     /*          3. Close Form Message
     /*-------------------------------------------------------------------*/
 
-    THE_TATTOOIST.forms = function(){
+    Tattoo_Studio.forms = function(){
 
         /* 1. Email validator
         /*-------------------------------------------------------------------*/
@@ -573,7 +573,7 @@
     /*      Instragram Banner
     /*-------------------------------------------------------------------*/
 
-    THE_TATTOOIST.instagram = {
+    Tattoo_Studio.instagram = {
 
         globalObjs : {
             instagramBar : $('.instagram-bar'),
@@ -667,51 +667,51 @@
 
     $(document).ready(function(){
 
-        THE_TATTOOIST.magnificPopup();
-        THE_TATTOOIST.selectReplacer();
-        THE_TATTOOIST.toggle();
-        THE_TATTOOIST.tabs();
-        THE_TATTOOIST.portfolio.init();
-        THE_TATTOOIST.scrollToSection();
-        THE_TATTOOIST.mobileMenu.init();
-        THE_TATTOOIST.forms();
-        THE_TATTOOIST.backgrounds();
-        THE_TATTOOIST.parallax();
-        THE_TATTOOIST.youtubeBg();
+        Tattoo_Studio.magnificPopup();
+        Tattoo_Studio.selectReplacer();
+        Tattoo_Studio.toggle();
+        Tattoo_Studio.tabs();
+        Tattoo_Studio.portfolio.init();
+        Tattoo_Studio.scrollToSection();
+        Tattoo_Studio.mobileMenu.init();
+        Tattoo_Studio.forms();
+        Tattoo_Studio.backgrounds();
+        Tattoo_Studio.parallax();
+        Tattoo_Studio.youtubeBg();
 
     });
 
     // window load scripts
     $(window).load(function() {
 
-        THE_TATTOOIST.pageLoader();
-        THE_TATTOOIST.flexslider();
-        THE_TATTOOIST.instagram.init();
+        Tattoo_Studio.pageLoader();
+        Tattoo_Studio.flexslider();
+        Tattoo_Studio.instagram.init();
 
     });
 
     // window resize scripts
     $(window).resize(function() {
 
-        THE_TATTOOIST.portfolio.layout();
-        THE_TATTOOIST.mobileMenu.addRemoveClasses();
+        Tattoo_Studio.portfolio.layout();
+        Tattoo_Studio.mobileMenu.addRemoveClasses();
         // detect if it's a mobile device
         if (!(/Mobi/.test(navigator.userAgent))) {
-            THE_TATTOOIST.instagram.reload();
+            Tattoo_Studio.instagram.reload();
         }
     });
 
     // window orientationchange scripts
     $(window).on('orientationchange', function(event){
-        THE_TATTOOIST.instagram.reload();
+        Tattoo_Studio.instagram.reload();
     });
 
     // window scroll scripts
     $(window).scroll(function() {
 
-        THE_TATTOOIST.stickyMenu();
-        THE_TATTOOIST.scrollHighlight();
-        THE_TATTOOIST.contactsBar();
+        Tattoo_Studio.stickyMenu();
+        Tattoo_Studio.scrollHighlight();
+        Tattoo_Studio.contactsBar();
 
     });
 
