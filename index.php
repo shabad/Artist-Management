@@ -43,7 +43,7 @@ require("{$server}/include/title.php");
                                     <a title="Contact" href="contact.php">Contact Us</a>
 
                                 </li>
-                                <li><a title="Appointments" href="appointment.php"><i class="fa fa-thumb-tack"></i>Appointment</a></li>
+                                <li><a title="Appointments" href="login.php"></i>Login</a></li>
                             </ul>
                         </nav>
 

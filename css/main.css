@@ -1696,13 +1696,14 @@ textarea {
 }
 
 input[type="text"],
-textarea {
+textarea, input[type="password"] {
     padding: 10px;
     width: 100%;
 }
 
 input[type="text"]:focus,
-textarea:focus {
+textarea:focus, 
+input[type="password"]:focus {
     border-color: #161616;
 }
 

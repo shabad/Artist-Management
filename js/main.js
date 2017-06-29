@@ -374,48 +374,7 @@
     /*      Custom Backgrounds
     /*-------------------------------------------------------------------*/
 
-    Tattoo_Studio.backgrounds = function(){
-
-        $.each( config.backgrouns, function( key, value ) {
-
-            var $el = $(key),
-                $overlay = $('<div class="bg-overlay"></div>');
-
-            if ( value.img != null ) {
-                $el.addClass('bg').css('background-image', 'url(' + value.img + ')').prepend($overlay);
-            }
-
-            if ( value.overlay != null && !value.disableOverlay ) {
-                $el.find('.bg-overlay').remove();
-            }
-
-            if ( value.overlayOpacity != null ) {
-                $el.find('.bg-overlay').css('opacity', value.overlayOpacity);
-            }
-
-            if ( value.overlayColor != null ) {
-                $el.find('.bg-overlay').css('background-color', value.overlayColor);
-            }
-
-            if ( value.pattern != null && value.pattern ) {
-                $el.addClass('pattern');
-            }
-
-            if ( value.position != null ) {
-               $el.css('background-position', value.position);
-            }
-
-            if ( value.bgCover != null ) {
-                $el.css('background-size', value.bgCover);
-            }
-
-            if ( value.parallax != null && value.parallax ) {
-                $el.addClass('plx');
-            }
-
-        });
-
-    },
+   
 
     /*-------------------------------------------------------------------*/
     /*      Parallax
@@ -451,32 +410,7 @@
 
     },
 
-    /*-------------------------------------------------------------------*/
-    /*      YouTube Video Background
-    /*-------------------------------------------------------------------*/
-
-    Tattoo_Studio.youtubeBg = function(){
-
-        var $playerObject = $('.youtube-player');
-
-        $playerObject.mb_YTPlayer();
-
-        // Sound Control (On/Off)
-        $('#toggle-volume').click(function(e){
-            e.preventDefault();
-
-            var $icon = $(this).find('i');
-
-            if ( $icon.hasClass('fa-volume-off') ) {
-                $icon.removeClass('fa fa-volume-off').addClass('fa fa-volume-up');
-            } else {
-                $icon.removeClass('fa fa-volume-up').addClass('fa fa-volume-off');
-            }
-            $playerObject.toggleVolume();
-
-        });
-
-    },
+  
 
     /*-------------------------------------------------------------------*/
     /*      Forms
@@ -569,97 +503,7 @@
 
     },
 
-    /*-------------------------------------------------------------------*/
-    /*      Instragram Banner
-    /*-------------------------------------------------------------------*/
-
-    Tattoo_Studio.instagram = {
-
-        globalObjs : {
-            instagramBar : $('.instagram-bar'),
-            cacheResult : [],
-        },
-
-        init : function(){
-
-            if ( this.globalObjs.instagramBar.hasClass('feed-bg') ) {
-                this.getPicsUrls();
-            }
-
-        },
-
-        // create pics
-        getPics : function(cachedUrls){
-
-            var objs = this.globalObjs;
-
-            objs.instagramBar.prepend('<span class="pics-container"></span>');
-
-            var $picsContainer      = objs.instagramBar.find('.pics-container'),
-                instagramBarWidth   = objs.instagramBar.outerWidth(),
-                picsWidth           = objs.instagramBar.outerHeight(),
-                picsNumber          = parseInt( instagramBarWidth / picsWidth );
-
-            if ( instagramBarWidth % picsWidth > 0 ) {
-                picsNumber++;
-            }
-
-            $picsContainer.css('width', instagramBarWidth * picsNumber).empty();
-
-            $.each(cachedUrls, function(key,value) {
-                if ( key < picsNumber ){
-                    $picsContainer.append('<img src="' + value + '" alt="">');
-                }
-            });
-
-            $picsContainer.imagesLoaded(function() {
-                $picsContainer.fadeIn();
-            });
-
-        },
-
-        // get all url via ajax and create pics
-        getPicsUrls : function(){
-
-            var self = this,
-                objs = self.globalObjs;
-
-            $.getJSON('instagram/instagram.php', function(result){
-                // get and cache all urls
-                objs.cacheResult = result;
-                // create pics
-                self.getPics(objs.cacheResult);
-            }, 'json');
-
-        },
-
-        // delay function
-        delayFunction : (function(){
-
-            var timer = 0;
-            return function(callback, ms){
-                    clearTimeout (timer);
-                    timer = setTimeout(callback, ms);
-                };
-
-        })(),
-
-        // reload pics
-        reload : function(){
-
-            var self = this;
-
-            $('.pics-container').fadeOut('400', function(){
-                $(this).remove();
-            });
-
-            self.delayFunction(function(){
-                self.getPics(self.globalObjs.cacheResult);
-            }, 1000);
-
-        }
-
-    };
+   
 
     /*-------------------------------------------------------------------*/
     /*      Initialize all functions
@@ -675,9 +519,9 @@
         Tattoo_Studio.scrollToSection();
         Tattoo_Studio.mobileMenu.init();
         Tattoo_Studio.forms();
-        Tattoo_Studio.backgrounds();
+      
         Tattoo_Studio.parallax();
-        Tattoo_Studio.youtubeBg();
+        
 
     });
 
@@ -686,7 +530,7 @@
 
         Tattoo_Studio.pageLoader();
         Tattoo_Studio.flexslider();
-        Tattoo_Studio.instagram.init();
+        // Tattoo_Studio.instagram.init();
 
     });
 
@@ -697,13 +541,13 @@
         Tattoo_Studio.mobileMenu.addRemoveClasses();
         // detect if it's a mobile device
         if (!(/Mobi/.test(navigator.userAgent))) {
-            Tattoo_Studio.instagram.reload();
+            // Tattoo_Studio.instagram.reload();
         }
     });
 
     // window orientationchange scripts
     $(window).on('orientationchange', function(event){
-        Tattoo_Studio.instagram.reload();
+        // Tattoo_Studio.instagram.reload();
     });
 
     // window scroll scripts
