@@ -18,8 +18,8 @@ $google = $data->google;
 $linkedin = $data->linkedin;
 
 
-$sql = "INSERT INTO artists (fname, lname, email, password, phone, hours, bio, facebook, instagram, twitter, google, linkedin)
-VALUES ('".$fname."', '".$lname."', '".$email."', '".$password."', '".$phone."', '".$hours."', '".$bio."', '".$facebook."', '".$instagram."', '".$twitter."', '".$google."', '".$linkedin."')";
+$sql = "INSERT INTO artists (fname, lname, email, admin, password, phone, hours, bio, facebook, instagram, twitter, google, linkedin)
+VALUES ('".$fname."', '".$lname."', '".$email."', '0', '".$password."', '".$phone."', '".$hours."', '".$bio."', '".$facebook."', '".$instagram."', '".$twitter."', '".$google."', '".$linkedin."')";
 
 
 
