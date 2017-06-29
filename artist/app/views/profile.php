@@ -14,13 +14,18 @@
  <form>
 
             <div class="row">
+ 
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+
                     <strong>Avatar</strong>
+
                 </div>
+
                 <div class="col-xs-12 col-sm-12 col-md-7 col-lg-4">
+
                 <div class="file-upload">
         
-        <input type="file" file-model="myFile"/>
+        <input type="file" file-model="myFile" id ="myfile" name="myfile"/>
         
     </div>
     
@@ -37,7 +42,8 @@
                 </div>
  
             </div>
-
+            <br>
+<div uib-alert ng-repeat="alert in alertsImage" dismiss-on-timeout="5000" style = "width:500px;" ng-class="'alert-' + (alert.type || 'warning')" close="closeAlertImage($index)">{{alert.msg}}</div>
 
 <br>
 

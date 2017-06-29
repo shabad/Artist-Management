@@ -4,10 +4,22 @@
         .module('ArtistAdmin')
         .controller('profileCtrl', ['$scope', '$http', 'fileUpload',  function($scope, $http, fileUpload) {
 
+            $scope.alertsImage = [
+
+                          ];
+
+             $scope.closeAlertImage = function(index) {
+              $scope.alertsImage.splice(index, 1);
+            };
 
 
 
          $scope.uploadFile = function(){
+                    if($scope.myFile== null){
+                        $scope.alertsImage.push({type: 'danger', msg: 'Please upload a file'});
+                             return;
+
+                        }
                 var file = $scope.myFile;
                 console.log('file is ' );
                 console.dir(file);
@@ -15,6 +27,8 @@
                 var uploadUrl = "http://localhost:8000/artist/server/avatar.php";
                 var text = "avatar";
                 fileUpload.uploadFileToUrl(file, uploadUrl, text);
+                $('#myfile').val('');
+                $scope.alertsImage.push({type: 'success', msg: 'Your avatar has been changed'});
            };
 
 
