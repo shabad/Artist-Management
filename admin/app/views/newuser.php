@@ -200,8 +200,9 @@
         <br>
         <button type="button" class="btn btn-default" ng-click="create()">Create</button>
         </form>
-
-
+        <br>
+        <br>
+         <div uib-alert ng-repeat="alert in alerts" dismiss-on-timeout="5000" ng-class="'alert-' + (alert.type || 'warning')" close="closeAlert($index)">{{alert.msg}}</div>
 
         
 </div>

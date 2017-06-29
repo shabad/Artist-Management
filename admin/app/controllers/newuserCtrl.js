@@ -41,7 +41,7 @@
 
                     if(response.data == "success"){
 					
-                    //Show success alert
+                        $scope.alerts.push({type: 'success', msg: 'Artist has been created'});
 					
                 }
 
