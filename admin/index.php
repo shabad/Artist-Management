@@ -35,6 +35,7 @@
 
     <script src="./app/config.js"></script>
     <script src="./app/controllers/artistsCtrl.js"></script>
+    <script src="./app/controllers/newuserCtrl.js"></script>
 
 </head>
 
@@ -84,6 +85,11 @@
                             <a ui-sref="artists">
                             <i class="glyphicon glyphicon-user"></i>
                             Artists </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="create">
+                            <i class="glyphicon glyphicon-plus"></i>
+                            New Artist </a>
                         </li>
                        
                         <li ui-sref-active="active">
