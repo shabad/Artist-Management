@@ -49,7 +49,12 @@
 
                             <?php
 
-                               echo '<img class="rounded" src="./artist/server/avatars/'.$row['avatar'].'" alt="Tattoo Artist A">';
+                                if($row['avatar'] == null){
+                                    echo '<img class="rounded" src="./img/user.jpg">';
+                                }
+                                else{
+                               echo '<img class="rounded" src="./artist/server/avatars/'.$row['avatar'].'">';
+                           }
 
                             ?>
 

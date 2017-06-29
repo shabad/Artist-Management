@@ -11,37 +11,14 @@
 
     <br>
 <div>
- <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    <strong>Avatar</strong>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-7 col-lg-4">
-                <div class="file-upload">
-        
-        <input type="file" file-model="myFile"/>
-        
-    </div>
-    
-                    <!-- {{names.fname}} -->
-                </div>
-       <div class="col-xs-12 col-sm-12 col-md-7 col-lg-4">
 
-    <button class="btn btn-default" ng-click="uploadFile()">
-
-<span class="glyphicon glyphicon-upload"></span> Upload
-    </button>
-
-                    <!-- {{names.fname}} -->
-                </div>
- 
-            </div>
 
 
 <br>
 
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    <strong>First Name</strong>
+                    <strong>First Name *</strong>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8">
                 <input type="text" class="form-control" name="fname" ng-model="fname">
@@ -54,7 +31,7 @@
 
              <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    <strong>Last Name</strong>
+                    <strong>Last Name *</strong>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8">
                 <input type="text" class="form-control" name="fname" ng-model="lname">
@@ -67,7 +44,7 @@
 
              <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    <strong>Email</strong>
+                    <strong>Email *</strong>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8">
                 <input type="text" class="form-control" name="fname" ng-model="email">
@@ -79,7 +56,7 @@
             <br>
              <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    <strong>Password</strong>
+                    <strong>Password *</strong>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8">
                 <input type="Password" class="form-control" name="password" ng-model="password">

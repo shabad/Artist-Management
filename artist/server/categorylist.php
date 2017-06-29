@@ -19,7 +19,7 @@ if ($result->num_rows > 0) {
         array_push($arr, $insert);
     }
 } else {
-    echo "0 results";
+    
 }
 
 

@@ -18,6 +18,11 @@
 
 			$scope.create = function(){
 
+                if($scope.fname == null || $scope.lname == null || $scope.email == null || $scope.password == null){
+                    $scope.alerts.push({type: 'danger', msg: 'Fill in the required fields.'});
+                    return;
+                }
+
 				 var dataObj = {
         				fname: $scope.fname,
                         lname: $scope.lname,

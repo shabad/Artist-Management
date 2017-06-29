@@ -30,6 +30,8 @@
                 $hours = $row['hours'];
                 $url = $row['avatar'];
 
+
+
             ?>
 
 
@@ -141,8 +143,14 @@
                             <div class="col-md-6">
 
                             <?php
+                            if($url == null){
+                                echo '<img src="./img/artist.jpg" alt="Tattoo Artist" height="500">';
+
+                            }
+                            else{
 
                                echo '<img src="./artist/server/avatars/'.$url.'" alt="Tattoo Artist" height="500">';
+                           }
                             ?>
 
                                 
