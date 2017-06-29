@@ -1,4 +1,4 @@
-# Tattoo-Studio
+# Tattoo Studio
 This is a PHP website for a Tattoo Studio.
 Users can view various artists that work in the Tattoo Studio along with their previous art works. 
 
