@@ -7,7 +7,7 @@ session_start();
       // username and password sent from form 
       
       $myusername = mysqli_real_escape_string($conn,$_POST['username']);
-      $mypassword = mysqli_real_escape_string($conn,$_POST['password']); 
+      $mypassword = md5(mysqli_real_escape_string($conn,$_POST['password'])); 
       
       $sql = "SELECT id, admin FROM artists WHERE email = '$myusername' and password = '$mypassword'";
       $result = mysqli_query($conn,$sql);
