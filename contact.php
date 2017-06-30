@@ -41,22 +41,15 @@ New Philadelphia, Ohio, OH 44663</div>
 
                         <!-- ============ Contact Form - START ============ -->
 
-                        <form class="contact-form row" action="mailer/contact.php" method="post">
+                        <form class="contact-form row" action="mailer/contact.php" method="post" name="contact">
                             <div class="col-md-6">
                                 <label><strong>Full Name *</strong>
                                     <input class="required" type="text" name="name">
                                 </label>
                                 <label><strong>Email *</strong>
-                                    <input class="required" type="text" name="email">
+                                    <input class="required" type="text" name="email" id="email">
                                 </label>
-                                <label><strong>Subject</strong>
-                                    <select name="subject">
-                                        <option value="Subject 1">Subject 1</option>
-                                        <option value="Subject 2">Subject 2</option>
-                                        <option value="Subject 3">Subject 3</option>
-                                        <option value="Subject 4">Subject 4</option>
-                                    </select>
-                                </label>
+                                
                             </div>
                             <div class="col-md-6">
                                 <label><strong>Message *</strong>

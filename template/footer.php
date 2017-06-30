@@ -70,7 +70,7 @@ New Philadelphia, Ohio, OH 44663</strong></div>
 
         <script src="../js/jquery.min.js"></script>
         <script src="../js/common.js"></script>
-        <!-- <script src="../js/config.js"></script> -->
+        <script src="../js/config.js"></script>
         <script src="../js/main.js"></script>
 
     </body>
