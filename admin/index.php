@@ -48,9 +48,7 @@
             <div class="profile-sidebar">
                 <!-- SIDEBAR USERPIC -->
                 <div class="profile-userpic">
-                <?php
-                   echo '<img src="./server/avatars/'.$avatar.'" class="img-responsive" alt="">';
-                    ?>
+            
                 </div>
                 <!-- END SIDEBAR USERPIC -->
                 <!-- SIDEBAR USER TITLE -->
