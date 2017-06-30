@@ -34,7 +34,7 @@ elseif ($basename == "/login.php"){
 	$heading = "Login";
 }
 else{
-	$title = "f";
+	$title = "My Museum Tattoo Studio";
 }
 
 ?>
