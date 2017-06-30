@@ -4,7 +4,7 @@
 
 
 <!--  -->
-
+<title>Manage Artists</title>
 <div class="jumbotron text-center">
     <h3>Artists </h3>
     <br>

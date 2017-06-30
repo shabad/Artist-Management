@@ -1,7 +1,7 @@
 <?php
    include('../../session.php');
 ?>
-
+<title>My Work</title>
 <script type="text/javascript">
     function getRandomSize(min, max) {
   return Math.round(Math.random() * (max - min) + min);

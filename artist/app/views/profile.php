@@ -2,7 +2,7 @@
    include('../../session.php');
 ?>
 
-
+<title>Profile Edit</title>
 <!--  -->
 
 <div class="jumbotron text-center">

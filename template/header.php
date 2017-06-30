@@ -48,8 +48,8 @@ require("{$server}/include/title.php");
                                 <a title="Contact" href="contact.php">Contact Us</a>
                                 </li>
 
-                                <li class=<?php  if ($basename == "/appointment.php"){echo "selected";}    ?>>
-                                <a title="Appointment Page" href="appointment.php">Appointment</a>
+                                <li class=<?php  if ($basename == "/login.php"){echo "selected";}    ?>>
+                                <a title="Login" href="login.php">Login</a>
                                 </li>
                             </ul>
                         </nav>

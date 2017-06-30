@@ -8,7 +8,7 @@ if ($basename == "/index.php"){
 
 }
 elseif ($basename == "/artists.php"){
-	$title = "Artitsts";
+	$title = "Artists";
 	$heading = "Artists";
 }
 elseif ($basename == "/about.php"){
@@ -28,6 +28,10 @@ elseif ($basename == "/contact.php"){
 elseif ($basename == "/appointment.php"){
 	$title = "Appointment";
 	$heading = "Appointments";
+}
+elseif ($basename == "/login.php"){
+	$title = "Login";
+	$heading = "Login";
 }
 else{
 	$title = "f";

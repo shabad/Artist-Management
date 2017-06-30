@@ -88,7 +88,7 @@
                 <!-- END SIDEBAR USER TITLE -->
                 <!-- SIDEBAR BUTTONS -->
                 <div class="profile-userbuttons">
-                    <button type="button" class="btn btn-success btn-sm">View Profile</button>
+                   
                     
                 </div>
                 <!-- END SIDEBAR BUTTONS -->
@@ -119,11 +119,7 @@
                         </li>
 
 
-                        <li ui-sref-active="active">
-                            <a href="#">
-                            <i class="glyphicon glyphicon-flag"></i>
-                            Help </a>
-                        </li>
+
                         <li ui-sref-active="active">
                             <a href="logout.php">
                             <i class="glyphicon glyphicon-off"></i>

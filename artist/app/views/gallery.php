@@ -3,6 +3,8 @@
 
 ?>
 
+<title>Upload Images</title>
+
  <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <style>
@@ -28,7 +30,7 @@
     <div class="row">
     <form>
   <div class="col-sm-4"><input type="file" file-model="myFile" id = "myfile" name = "myfile"/></div>
-  <div class="col-sm-8"><input type="text" class = "form-control" ng-model="category"></div>
+  <div class="col-sm-8"><input type="text" class = "form-control" ng-model="category" placeholder="Category"></div>
 </div>
 
 

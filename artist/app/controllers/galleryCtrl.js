@@ -22,7 +22,7 @@
                           ];
 
  $scope.uploadFile = function(){
-    if($scope.category == null){
+    if($scope.category == null || $scope.category == ''){
         $scope.alerts.push({type: 'danger', msg: 'Category cannot be empty'});
         return;
 

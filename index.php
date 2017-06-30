@@ -54,14 +54,14 @@ require("{$server}/include/title.php");
                 </div>
 
                 <div id="brand">
-
-                    <h1 id="logo" style="font-size:70px; line-height: 1.3em; font-family: 'Pirata One', cursive;"><imgalt="The Tattooist - Tattoo Studio"> The Museum Tattoo <br> Shop</h1>
+<h3 id="logo" style="padding-left: 100px;"><img src="img/logo.png" width="500"  alt="The Tattooist - Tattoo Studio"></h3>
+                    
                     <div class="info">
                         <span><a class="btn md dark" href="appointment.html"><i class="fa fa-thumb-tack"></i>Appointment</a></span>
                     </div>
                     <!-- <p></p> -->
                      <div class="buttonAppointment">
-                         <a class="btn md dark" href="appointment.html"><i class="fa fa-thumb-tack"></i>Appointment</a>
+                         <a class="btn md dark" href="artists.php"><i class="fa fa-user"></i>Our Artists</a>
                     </div>
 
                 </div>
@@ -75,10 +75,11 @@ require("{$server}/include/title.php");
                 <!-- ============ Contacts Bar - START ============ -->
 
                 <div id="contacts-bar" class="row">
-                    <div class="address col-md-6"><strong>My Museum Tattoo Shop</strong>, 1234 Our Awesome Street, Our Awesome City, OAS 123456</div>
+                    <div class="address col-md-6"><strong>My Museum Tattoo Studio</strong>, 935 Tuscarawas Ave NW
+New Philadelphia, Ohio, OH 44663</div>
                     <div class="other col-md-6">
-                        <span class="contact"><i class="fa fa-phone"></i>Phone: <strong>(00) 123 456789</strong></span>
-                        <span class="contact"><i class="fa fa-envelope"></i>Email: <a href="mailto:email@domain.com"><strong>email@domain.com</strong></a></span>
+                       <span class="contact"><i class="fa fa-phone"></i>Phone: <strong>(330) 343-8500</strong></span>
+                       <span class="contact"><i class="fa fa-envelope"></i>Email: <a href="mailto:email@domain.com"><strong>info@mymuseumtattoostudio.com</strong></a></span>
                     </div>
                 </div>
 
