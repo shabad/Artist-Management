@@ -1,6 +1,8 @@
 // app.js
 var ArtistAdmin = angular.module('ArtistAdmin', ['ui.router', 'ui.bootstrap']);
 
+
+
 ArtistAdmin.config(function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise('/home');
@@ -38,3 +40,4 @@ ArtistAdmin.config(function($stateProvider, $urlRouterProvider) {
 
 
 });
+

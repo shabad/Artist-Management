@@ -2,7 +2,7 @@
     'use strict';
     angular
         .module('Admin')
-        .controller('artistsCtrl', ['$scope', '$http',  function($scope, $http) {
+        .controller('artistsCtrl', ['$scope', '$http', 'config',  function($scope, $http, config) {
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-        	$http.get("http://localhost:8000/admin/server/users.php")
+        	$http.get(config.API+"users.php")
 				.then(function (response) {
                     $scope.users = response.data
                 });
@@ -52,7 +52,7 @@
         		console.log(dataObj);
 
 
-				$http.post('http://localhost:8000/admin/server/user-delete.php', dataObj).then(function(response) {
+				$http.post(config.API+'user-delete.php', dataObj).then(function(response) {
 
                     if(response.data == "success"){
 					

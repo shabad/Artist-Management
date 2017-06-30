@@ -2,12 +2,14 @@
     'use strict';
     angular
         .module('ArtistAdmin')
-        .controller('profileCtrl', ['$scope', '$http', 'fileUpload',  function($scope, $http, fileUpload) {
+        .controller('profileCtrl', ['$scope', '$http', 'fileUpload', 'config',  function($scope, $http, fileUpload, config) {
 
             $scope.alertsImage = [
 
                           ];
 
+
+console.log(config.API)
              $scope.closeAlertImage = function(index) {
               $scope.alertsImage.splice(index, 1);
             };
@@ -24,7 +26,7 @@
                 console.log('file is ' );
                 console.dir(file);
 
-                var uploadUrl = "http://localhost:8000/artist/server/avatar.php";
+                var uploadUrl = config.API+"avatar.php";
                 var text = "avatar";
                 fileUpload.uploadFileToUrl(file, uploadUrl, text);
                 $('#myfile').val('');
@@ -42,7 +44,7 @@
               $scope.alerts.splice(index, 1);
             };
 
-        	$http.get("http://localhost:8000/artist/server/profile.php")
+        	$http.get(config.API+"profile.php")
 				.then(function (response) {$scope.names = response.data});
 
 
@@ -63,7 +65,7 @@
 
 
         		console.log(dataObj);
-				$http.post('http://localhost:8000/artist/server/profile-edit.php', dataObj).then(function(response) {
+				$http.post(config.API+'profile-edit.php', dataObj).then(function(response) {
 					$scope.alerts.push({type: 'success', msg: 'Your profile has successfully been updated.'});
 					$scope.message = response.data;
                     console.log($scope.message);

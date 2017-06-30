@@ -2,7 +2,7 @@
     'use strict';
     angular
         .module('ArtistAdmin')
-        .controller('imagesCtrl', ['$scope', '$http',  function($scope, $http) {
+        .controller('imagesCtrl', ['$scope', '$http', 'config',  function($scope, $http, config) {
 
             $scope.images = [];
 
@@ -14,7 +14,7 @@
 
 
         $http({
-            url: 'http://localhost:8000/artist/server/categorylist.php',
+            url: config.API+'categorylist.php',
             method: "GET",
         })
         .then(function(response) {
@@ -32,7 +32,7 @@
 
 
                    $http({
-                        url: 'http://localhost:8000/artist/server/mywork.php',
+                        url: config.API+'mywork.php',
                         method: "POST",
                         data: { 'cat' : $scope.category }
                     })
@@ -53,7 +53,7 @@
 
 
                 $http({
-                        url: 'http://localhost:8000/artist/server/deleteImage.php',
+                        url: config.API+'deleteImage.php',
                         method: "POST",
                         data: { 'id' : id }
                     })

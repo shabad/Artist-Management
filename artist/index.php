@@ -57,6 +57,8 @@
     <script src="./app/directives/gallery_directive.js"></script>
       <script src="./app/services/gallery_service.js"></script>
 
+      <script src="./app/app.constant.js"></script>
+
 </head>
 
 <body ng-app="ArtistAdmin">

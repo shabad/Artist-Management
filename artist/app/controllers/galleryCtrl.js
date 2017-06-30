@@ -7,7 +7,7 @@
 
 
 
-.controller('galleryCtrl', ['$scope', 'fileUpload', function($scope, fileUpload){
+.controller('galleryCtrl', ['$scope', 'fileUpload', 'config', function($scope, fileUpload, config){
 
       $scope.closeAlert = function(index) {
               $scope.alerts.splice(index, 1);
@@ -38,7 +38,7 @@
         console.log('file is ' );
         console.dir(file);
 
-        var uploadUrl = "http://localhost:8000/artist/server/upload.php";
+        var uploadUrl = config.API+"upload.php";
         var text = $scope.category;
         fileUpload.uploadFileToUrl(file, uploadUrl, text);
         $scope.alerts.push({type: 'success', msg: 'Image has been uploaded'});

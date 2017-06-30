@@ -2,7 +2,7 @@
     'use strict';
     angular
         .module('Admin')
-        .controller('newuserCtrl', ['$scope', '$http',  function($scope, $http) {
+        .controller('newuserCtrl', ['$scope', '$http', 'config',  function($scope, $http, config) {
 
 
 
@@ -42,7 +42,7 @@
         		console.log(dataObj);
 
 
-				$http.post('http://localhost:8000/admin/server/newuser.php', dataObj).then(function(response) {
+				$http.post(config.API+'newuser.php', dataObj).then(function(response) {
 
                     if(response.data == "success"){
 					

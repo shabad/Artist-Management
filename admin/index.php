@@ -36,6 +36,7 @@
     <script src="./app/config.js"></script>
     <script src="./app/controllers/artistsCtrl.js"></script>
     <script src="./app/controllers/newuserCtrl.js"></script>
+    <script src="./app/app.constant.js"></script>
 
 </head>
 
